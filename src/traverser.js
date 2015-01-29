@@ -2,8 +2,11 @@ var esprima = require('esprima'),
     escope = require('escope'),
     _ = require('lodash');
 
-var Traverser = function(code) {
-  var ast = esprima.parse(code);
+var Traverser = function(code, options) {
+  var defaultOptions = {
+    loc: true
+  };
+  var ast = esprima.parse(code, _.extend(defaultOptions, options));
   this.scopeTrees = escope.analyze(ast).scopes;
   this.globals = [];
 }

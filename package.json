@@ -9,6 +9,7 @@
   "author": "Gareth Tan (http://garethtan.com/)",
   "license": "MIT",
   "dependencies": {
+    "colors": "^1.0.3",
     "escope": "^1.0.1",
     "esprima": "^1.2.2",
     "lodash": "^2.4.1"
